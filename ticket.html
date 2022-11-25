@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/bb4ac8ec25.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Movies Page</title>
+</head>
+<body>
+
+     <!-- The arrow that takes the page to the top, i.e the id in the header -->
+     <header id="top"> 
+        
+        <a href="index.html" class="logo"><img src="images/LOGO.gif" alt="logo"></a>
+
+        <nav class="nav-bar">
+            <a href="index.html">Home</a>
+            <a href="trending.html">Trending</a>
+            <div class="dropdown">
+                <a href="#">Movies</a>
+                <div class="dropdown-content">
+                    <a href="action.html">Action Movies</a>
+                    <a href="africa.html">Africa Magic</a>
+                    <a href="series.html">Series</a>
+                    <a href="ticket.html">Book Your Ticket</a>
+                </div>
+            </div>   
+        </nav>
+        
+        <div class="icons">
+            <i class="fa-solid fa-magnifying-glass" id="search-btn"></i>
+            <i class="fas fa-bars" id="menu-btn"></i>
+        </div>
+
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="Search here">
+            <label for="search-box" class="fa-solid fa-magnifying-glass"></label>
+        </div>
+    </header>
+
+    <section class="booking-page-image">
+        <div class="series-home-text">
+            <h1>Welcome</h1>
+            <p>Please kindly book your ticket on the below form</p>
+        </div>
+    </section>
+
+
+     <!-- Booking Ticket Section -->
+     <div class="booking-title">
+        <h1>Online Booking</h1>
+        <h3>Booking Your Ticket Now</h3>
+    </div>
+    <section>
+        <div class="form-details">
+
+            <form action="" method="get" oninput="totalprice.value=parseInt(price.value)*parseInt(tickets.value)">
+
+                <div class="input-text">
+                    <div class="input">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Please enter your full name" required>
+                    </div>
+
+                    <div class="input">
+                        <label>Email Address</label>
+                        <input type="text" placeholder="Enter your email address">
+                    </div>
+
+                    <div class="input">
+                        <label>Phone Number</label>
+                        <input type="number" placeholder="Enter phone number" required>
+                    </div>
+
+                    <div class="input">
+                        <label for="booking-date">Date of Booking</label>
+                        <input type="date" id="dateID" required>
+                    </div>
+                    
+                    <div class="input">
+                        <label>ID Number</label>
+                        <input type="number" placeholder="Enter ID number (National Identification Card Only)" required>
+                    </div>
+
+                    <div class="input">
+                        <label>Gender</label>
+                            <select name="" id="" class="gender">
+                            <option value="select">Select Gender</option>
+                            <option value="select">Female</option required>
+                            <option value="select">Male</option required>
+                        </select>
+                        <!-- <label> <input type="radio" name="gender" value="female" required>Female</label>
+                        <label> <input type="radio" name="gender" value="male" required>Male</label> -->
+                    </div>
+                </div>
+
+                <div class="input-text">
+                    <fieldset>
+                        <legend>Ticket Details</legend>
+                        <div class="input">
+                            <label>Select Movies</label>
+                            <select name="" id="">
+                                <option value="select">Select Movie</option>
+                                <option value="select">The Thor: The Dark World</option>
+                                <option value="select">Spy Quest</option>
+                                <option value="select">Baby Brema</option>
+                                <option value="select">Resident Evil</option>
+                                <option value="select">Morbuis: The Collectiable Figure</option>
+                            </select>
+                        </div>
+
+                        <div class="input">
+                            <label>Select Time</label>
+                            <!-- <select name="" id=""> -->
+                                <input class="time-for" type="time" required>
+                                <!-- <option value="select">Select Time</option>
+                                <option value="select">9:00am - 12noon</option>
+                                <option value="select">10:00pm - 2am</option>
+                                <option value="select">10:am - 5:00pm</option>
+                                <option value="select">8:00am - 6:00pm</option>
+                                <option value="select">1:00pm - 5:00pm</option> -->
+                            <!-- </select> -->
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <div class="input">
+                            <label for="price">Select Level of Seat</label>
+                            <select name="price" id="">
+                                <option value="none">Select Level of Seat</option>
+                                <option value="200.00">Platinum - GHC200.00</option>
+                                <option value="400.00">Gold - GHC400.00</option>
+                                <option value="600.00">Exclusive - GHC600.00</option>
+                            </select>
+                        </div>
+
+                        <div class="input">
+                            <label for="tickets">Number of Tickets</label>
+                            <select name="tickets" id="">
+                                <option value="none">Select Number of Tickets</option>
+                                <option value="1">1 Ticket</option>
+                                <option value="2">2 Ticket</option>
+                                <option value="3">3 Ticket</option>
+                                <option value="4">4 Ticket</option>
+                                <option value="5">5 Ticket</option>
+                                <option value="6">6 Ticket</option>
+                                <option value="7">7 Ticket</option>
+                                <option value="8">8 Ticket</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <div class="input total-results">
+                        <label for="price">Total Ticket Price: GHC</label>
+                        <output name="totalprice" for="total price"aria-placeholder="Total Ticket Price"></output>
+                    </div>
+                    <!-- 
+                    <div class="input">
+                        <label>Ticket per price</label>
+                        <input type="number" placeholder="Price" disabled>
+                    </div>
+
+                    <div class="input">
+                        <label class="total-price">Total Ticket Price</label>
+                        <input type="number" name="" id="" placeholder="Total Ticket Price" disabled>
+                    </div> -->
+
+                </div>
+
+                <a href="#" class="btn-reset">Book Your Ticket Now</a>
+                <a href="#" class="btn-reset">Reset</a>
+
+            </form>
+
+        </div>
+        
+    </section>
+
+    
+
+     <!-- The arrow that takes the page to the top -->
+     <a href="#"><button class="top-btn" href="#top"><i class="fa-solid fa-arrow-up-long"></i></button></a>
+
+    
+     <footer class="page-footer">
+
+         <div class="footer-top">
+
+             <div class="easy-acess">
+                 <h4>Easy Acess Links</h4>
+                 <a href="index.html">Home</a>
+                 <a href="series.html">Series</a>
+                 <a href="ticket.html">Book Your Ticket</a>
+
+             </div>
+ 
+             <div class="easy-acess">
+                 <h4>Open Hours</h4>
+                 <p>Monday - Sunday <br> 24/7 </p>
+             </div>
+ 
+             <div class="easy-acess">
+                 <h4>Locate Us</h4>
+                 <p>98 Street, Odumase-Klo <br> Grand Floor of Mozat Plaza <br> Email: info@mozat.org.gh <br>0245252213  | 0552282515</p>
+             </div>
+         </div>
+
+         <div class="footer-bottom">
+             <p> &copy; 2022.  All rights reserved by Mozat </p>
+
+             <div class="icon-footer">
+                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                 <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
+                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
+             </div>
+         </div>
+     </footer>
+
+ <script src="js/main.js"></script>
+</body>
+</html>

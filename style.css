@@ -1,0 +1,1081 @@
+* {
+    font-family:'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000  ;
+}
+
+section {
+    padding: 3rem 7%;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000000;
+    padding: 1rem 3%;
+    border-bottom: 3px solid #ffff00;
+    z-index: 1000;
+}
+
+header .logo img {
+    width: 80px;
+}
+
+header .nav-bar a {
+    font-size: 2rem;
+    color: #ffff00;
+    padding: .5rem 1.5rem;
+    transition: 0.4s;
+}
+
+header .nav-bar a:hover {
+    /* border-bottom: 2px solid blue;
+    padding-bottom: .3rem; */
+    color: red;
+}
+
+.home-image {
+    background-image: linear-gradient(to left, rgba(53, 20, 20, 0.6),rgb(53, 20, 20, 0.6)) , url(/images/africa\ background4.jpg);
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    object-fit: cover;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+
+.home-text h1 {
+    color: #ffffff;
+    font-weight: 600px;
+    font-size: 30px;
+    justify-content: center;
+    margin-top: 2rem;
+    justify-items: center;
+    text-transform: uppercase;
+}
+
+.home-text p {
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.movies-pic {
+    background: linear-gradient(to left, rgba(177, 12, 12, 0.2), #000000);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.movies-pic  h3 {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 1000;
+    font-size: 25px;
+    padding-top: 30px;
+    color: #fff;
+    padding-bottom: 1rem;
+    border: 2px solid gray;
+    padding: 12px 16px;
+    background: #000;
+    width: 60%;
+    margin: auto;
+    margin-top: .6rem;
+}
+
+.movies-pic h3 span {
+    color: red;
+    font-size: 48px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.movies-pic h3 span:hover {
+    color: #000000;
+}
+
+.movies-pic h3:hover {
+    background:  #73c0e4;
+}
+
+.movies-pic .box-container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns:  repeat(auto-fit, minmax(25rem,1fr));
+    margin: 2rem;
+}
+
+.movies-pic .box-container .box {
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    border: 1px groove skyblue;
+    border-style: dashed;
+} 
+
+.movies-pic .box-container .box img {
+    height: 30rem;
+    width: auto;
+}
+
+/* This zoom the pics the text out */
+.movies-pic .box-container .box:hover {
+    transform: scale(1.1);
+}
+
+.movies-pic .box-container .box .content h2 {
+    font-size: 1.7rem;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    padding: .5rem 0;
+    width: auto;
+}
+
+.movies-pic .box-container .box h2:hover {
+    color: blue;
+    background: #fff;
+}
+
+.movies-pic .box-container .box .content span {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 1.2rem;
+    font-style: italic;
+}
+
+.movies-pic .box-container .box span:hover {
+    color: red;
+}
+
+header .icons #menu-btn {
+    display: none;
+
+}
+
+/* The arrow that takes the page to the top */
+.top-btn {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 2%;
+    bottom: 8%;
+    cursor: pointer;
+    color: red;
+    font-size: 1rem;
+    border-radius: 50%;
+    background: #000;
+    border: 1px solid #fff;  
+}
+
+/* Search Button Section */
+header .search-form {
+    position: absolute;
+    top: 115%;
+    width: 50rem;
+    right: 7%;
+    height: 5rem;
+    display: flex;
+    background: #ffffff;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+header .search-form.active {
+    transform: scaleY(1);
+}
+
+header .search-form input {
+    height: 100%;
+    width: 100%;
+    color: #000;
+    font-size: 1.6rem;
+    padding: 1rem;
+    text-transform: none;
+    font-style: italic;
+}
+
+/* ::placeholder {
+    color: red;
+} */
+
+header .search-form label {
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: aqua;
+}
+
+header .search-form label:hover {
+    color: red;
+}
+
+header .icons i {
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+header .icons i:hover {
+    color: greenyellow;
+}
+
+/* Dropdown List in the navbar */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown a {
+    text-transform: capitalize;
+}
+
+/* Dropdown content hidder by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    margin-top: .8rem;
+    width: 280px;
+    height: 240px;
+    border: 1px solid rgba(177, 12, 12, 0.2);
+    box-shadow: 0px 8px 16px rgba(0 0 0 0.3);
+    z-index: 1;
+}
+
+/* Link inside the dropdown */
+.dropdown-content a {
+    display: block;
+    font-size: 1.7rem;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 1rem;
+    padding: 16px 16px;
+    text-decoration: none;
+}
+
+/* Change color of dropdown link on hover */
+.dropdown-content a:hover {
+    background-color: bisque;
+}
+
+/* Show dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* .pic-btn {
+    font-size: 12px;
+    border: 1px solid orangered;
+    align-items: center;
+    background: #000;
+    text-decoration: none;
+    padding: 8px 8px;
+    display: inline-block;
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 5%;
+    margin-left: 10rem;
+    margin-bottom: 1px;
+    transition: width 3s height 3s;
+    animation: ticket 1s linear infinite alternate;
+}
+
+.pic-btn:hover {
+    color: #000000;
+    background: orangered;
+    border-radius: 5%;
+}
+
+@keyframes ticket {
+    0% {color: #990000; left: 0px; top: 0px;}
+    25% {color: #ffff00; left: 200px; top: 0px;}
+    50% {color: #ffffff; left: 200px; top: 200px;}
+    75% {color: #8fce00; left: 0px; top: 200px;}
+    100% {color: #452a00; left: 0px; top: 0px;}
+} */
+
+
+.page-footer {
+    font-size: 1.1rem;
+    background: rgba(29, 23, 23, 0.3);
+    padding: 1rem 5%; 
+    margin-top: 10rem; 
+    padding: 1.5rem;
+    box-shadow: 0 .3rem 1.9rem yellow;
+    border: .4rem solid rgba(29, 23, 23, 0.3);
+}
+
+.page-footer .footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: .6rem;
+    padding: 1rem 5%;
+}
+
+.page-footer .footer-top .easy-acess h4 {
+    padding: .5rem 0;
+    font-size: 2.5rem;
+    color:#fff;
+}
+.page-footer .footer-top .easy-acess a { 
+    display: block;
+    padding: .5rem 0;
+    color:#f44336;
+    line-height: 2rem;
+    font-size: 18px;
+}
+
+.page-footer .footer-top .easy-acess a:hover {
+    color: yellow;
+}
+
+.page-footer .footer-top .easy-acess p {
+    display: block;
+    padding: .5rem 0;
+    color:#806d6d;
+    line-height: 2.5rem;
+    font-size: 18px;
+}
+
+
+footer .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    border-top: 1px solid #fff;
+}
+
+footer .footer-bottom .icon-footer a {
+    color:#fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+footer .footer-bottom p {
+    color: #806d6d;
+    font-size: 16px;
+}
+
+/* SERIES MOVIES PAGE */
+.series-page-image {
+    background-image: linear-gradient(to left, rgba(29, 23, 23, 0.89),rgba(151, 32, 32, 0.055)), url(/images/seriesbackground1.webp);
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    object-fit: cover;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.series-home-text h1 {
+    color: #fff;
+    font-weight: 600px;
+    font-size: 40px;
+    justify-content: center;
+    margin-top: 2rem;
+    justify-items: center;
+    text-transform: uppercase;
+    padding-left: 10rem;
+}
+
+.series-home-text p {
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 1rem;
+    padding-left: 10rem;
+}
+
+
+
+/* ACTION PAGE */
+.action-page-image {
+    background-image: url(/images/background2.webp);
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+.action-home-text h1 {
+    color: #ffffff;
+    font-weight: 600px;
+    font-size: 40px;
+    margin-top: 2rem;
+    justify-items: center;
+    text-transform: uppercase;
+    padding-left: 10rem;
+}
+
+.action-home-text p {
+    color: #fff;
+    font-size: 22px;
+    /* text-align: center; */
+    padding-top: 1rem;
+    padding-left: 10rem;
+}
+
+.action-pic {
+    background: #000000;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.action-home-text h1 {
+    color: #ffffff;
+    font-weight: 600px;
+    font-size: 40px;
+    margin-top: 2rem;
+    justify-items: center;
+    text-transform: uppercase;
+    padding-left: 10rem;
+}
+
+.action-home-text p {
+    color: #fff;
+    font-size: 22px;
+    padding-top: 1rem;
+    padding-left: 10rem;
+}
+
+.action-pic {
+    background: #000000;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.action-pic h3 {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 1000;
+    font-size: 25px;
+    padding-top: 30px;
+    color: #fff;
+    padding-bottom: 1rem;
+    padding: 12px 16px;
+    background: #000;
+    width: 40%;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+
+.action-pic h3 span {
+    color: red;
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    padding: 1.2rem;
+    font-style: italic;
+}
+
+.action-pic h3 span:hover {
+    color: yellow;
+}
+
+.action-pic h3:hover {
+    background:  #73c0e4;
+}
+
+.action-pic .box-container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns:  repeat(auto-fit, minmax(25rem,1fr));
+    margin: 2rem;
+}
+
+.action-pic .box-container .box {
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+} 
+
+.action-pic .box-container .box img {
+    height: 30rem;
+    width: auto;
+}
+
+/* This zoom the pics the text out */
+.action-pic .box-container .box:hover {
+    transform: scale(1.1);
+}
+
+.action-pic .box-container .box .content h2 {
+    font-size: 1.7rem;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    padding: .5rem 0;
+    width: auto;
+}
+
+.action-pic .box-container .box h2:hover {
+    color: blue;
+    background: #fff;
+}
+
+.action-pic .box-container .box .content span {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 1.2rem;
+    font-style: italic;
+}
+
+.action-pic .box-container .box span:hover {
+    color: red;
+}
+
+
+/* AFRICA MOVIES PAGE */
+.africa-page-image {
+    background-image: url(/images/africa\ background2.jpg);
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+.africa-home-text h1 {
+    color: #ffffff;
+    font-weight: 600px;
+    font-size: 40px;
+    justify-content: center;
+    margin-top: 2rem;
+    justify-items: center;
+    text-transform: uppercase;
+    padding-left: 10rem;
+}
+
+.africa-home-text p {
+    color: #fff;
+    font-size: 22px;
+    padding-top: 1rem;
+    padding-left: 10rem;
+}
+
+.africa-pic {
+    background: #000000;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.africa-pic h3 {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 1000;
+    font-size: 25px;
+    padding-top: 30px;
+    color: #fff;
+    padding-bottom: 1rem;
+    padding: 12px 16px;
+    background: #000;
+    width: 40%;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+
+.africa-pic h3 span {
+    color: red;
+    font-size: 48px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.africa-pic h3 span:hover {
+    color: yellow;
+}
+
+.africa-pic h3:hover {
+    background:  #73c0e4;
+}
+
+.africa-pic .box-container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns:  repeat(auto-fit, minmax(25rem,1fr));
+    margin: 2rem;
+}
+
+.africa-pic .box-container .box {
+    padding-bottom: 2.5rem;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid red;
+} 
+
+.africa-pic .box-container .box img {
+    height: 13rem;
+    width: auto;
+}
+
+/* This zoom the pics the text out */
+.africa-pic .box-container .box:hover {
+    transform: scale(1.1);
+}
+
+.africa-pic .box-container .box .content h2 {
+    font-size: 1.7rem;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    padding: .5rem 0;
+    width: auto;
+}
+
+.africa-pic .box-container .box h2:hover {
+    color: blue;
+    background: #fff;
+}
+
+.africa-pic .box-container .box .content span {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 1.2rem;
+    font-style: italic;
+}
+
+.africa-pic .box-container .box span:hover {
+    color: red;
+}
+
+
+/* TRENDING MOVIES PAGE */
+.trending-page-image {
+    background-image: url(/images/trebackground1.jpg);
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    object-fit: cover;
+    /* justify-content: center; */
+    margin-bottom: 30px;
+}
+
+.trending-home-text h1 {
+    color: #f44336;
+    font-weight: 600px;
+    font-size: 40px;
+    /* justify-content: center; */
+    margin-top: 2rem;
+    justify-items: center;
+    text-transform: uppercase;
+    padding-left: 10rem;
+}
+
+.trending-home-text p {
+    color: #fff;
+    font-size: 22px;
+    /* text-align: center; */
+    padding-top: 1rem;
+    padding-left: 10rem;
+}
+
+
+
+/* BOOK YOUR TICKET PAGE */
+.booking-page-image {
+    background-image: linear-gradient(to left, rgba(32, 26, 26, 0.199),rgba(151, 32, 32, 0.055)), url(/images/book1.jpg);
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    object-fit: cover;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.booking-title h1 {
+    font-size: 8rem;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 6rem;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px yellow;
+    position: relative;
+}
+
+.booking-title h3 {
+    font-size: 4rem;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px yellow;
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.form-details form {
+    max-width: 80rem;
+    border-radius: .4rem;
+    box-shadow: 0 .4rem 1.5rem aqua;
+    border: .2rem solid rgba(29, 23, 23, 0.3);
+    background: rgba(29, 23, 23, 0.3);
+    padding: 1.5rem;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.form-details form .input-text {
+    display: block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-details form .input-text .input {
+    width: 100%;
+}
+
+.form-details form .input-text .input label {
+    display: block;
+    padding: .7rem 0;
+    font-size: 2rem;
+    color: greenyellow;
+}
+
+.form-details form .input-text .input legend {
+    display: block;
+    padding: .5rem 0;
+    font-size: 2rem;
+}
+
+.form-details form .input-text .total-results {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: .6rem;
+    background: #fff;
+    padding: 1.2rem;
+    font-size: 2rem;
+    color: #000;
+    text-transform: none;
+    margin-bottom: 2rem;
+    border-radius: .6rem;
+}
+
+.form-details form .input-text .total-results label {
+    font-size: 1.8rem;
+    color: #000;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+/* .form-details form .input-text .input span {
+    color: #fff;
+    font-size: 1rem;
+} */
+
+/* .form-details form .input-text .input .total-price {
+    color: #ffffff;
+} */
+
+.form-details form .input-text .input input {
+    width: 100%;
+    background: #fff;
+    padding: 1.5rem;
+    font-size: 2rem;
+    color: #000;
+    text-transform: none;
+    margin-bottom: 2.5rem;
+    border-radius: .6rem;
+}
+
+.form-details form .input-text fieldset {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: .9rem .5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-details form .input-text legend {
+    width: 100%;
+    font-size: 2.7rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+    border: 2px solid #2986cc;
+    padding: 14px;
+    background: yellow;
+    border-radius: .6rem;
+}
+
+.form-details form .input-text legend:hover {
+    color: #fff;
+    background: #990000;
+    border: 1px solid #fff;
+}
+
+.form-details form .input-text select {
+    width: 90%;
+    border-radius: .6rem;
+    padding: 1.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;
+}
+
+.form-details form .input-text .gender {
+    width: 100%;
+    border-radius: .6rem;
+    padding: 1.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+
+.form-details form .input-text option {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+::placeholder {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;
+    color: #000;
+}
+
+.form-details form .btn-reset {
+    font-size: 18px;
+    border: 1px solid orangered;
+    background: #000;
+    padding: 14px 16px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 4rem;
+    border-radius: 5%;
+    /* transition: width 3s height 6s;
+    animation: book 3s linear infinite alternate; */
+}
+
+.form-details form .btn-reset:hover {
+    color: #000000;
+    background: orangered;
+    border-radius: 5%;
+}
+
+
+
+/* MEDIA QUERIES (SMALL SCREEN) */
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 1.5rem 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    header .logo img {
+        width: 5rem;
+    }
+    
+}
+
+@media (max-width:768px) {
+
+    header .icons #menu-btn {
+        display: inline-block;
+    }
+
+    header .nav-bar {
+        width: 30rem;
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: grey;
+        border-top: .2rem solid rgba(255, 255, 255, .9);
+        border-bottom: .2rem solid rgba(255, 255, 255, .9);
+        height: calc(100vh - 9.5rem);
+        transition: .5s;
+    }
+
+    header .nav-bar.active {
+        right: 0;
+    }
+
+    header .nav-bar a {
+        display: block;
+        color: whitesmoke;
+        font-size: 2rem;
+        margin: 1.5rem;
+        padding: .5rem;
+    }
+
+    header .icons i {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    header .search-form{
+        width: 90%;
+        right: 2rem;
+    }
+
+    .home-image {
+        background-size: cover;
+        background-position: left;
+        justify-content: left;
+        text-align: center;
+    }
+
+    .home-text h1 {
+        font-size: 3.5rem;
+    }
+
+    .home-text p {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .movies-pic h3 span {
+        font-size: 3.5rem;
+        justify-content: center;
+    }
+
+    .movies-pic .box-container .box img {
+        width: auto;
+        height: 20rem;
+    }
+
+    .movies-pic .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 2fr));
+        align-items: center;
+        margin: auto;
+    }
+    /* SERIES PAGE */
+    .series-page-image {
+        background-size: cover;
+        background-position: left;
+        justify-content: left;
+        text-align: center;
+    }
+
+    .series-home-text h1 {
+        font-size: 3.5rem;
+    }
+
+    .series-home-text p {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .action-pic {
+        background-size: cover;
+        background-position: left;
+        justify-content: left;
+        text-align: center;
+    }
+
+    /* BOOKING IMAGE */
+    .booking-page-image {
+        background-size: cover;
+        background-position: left;
+        justify-content: left;
+        text-align: center;
+    }
+
+    .booking-title h1 {
+        font-size: 3.5rem;
+    }
+
+    .booking-title h3 {
+        font-size: 2.5rem;
+    }
+
+    /* .form-details {
+
+    } */
+
+}
+
+@media (max-width:450px) {
+
+    html {
+        font-size: 40%;
+    }
+
+    .movies-pic .box-container {
+        flex-direction: column;
+    }
+
+    .page-footer .footer-top{
+        flex-direction: column;
+    }
+
+    .page-footer .footer-bottom { 
+        flex-direction: column;
+    }
+
+    .form-details .input-text {
+        flex-direction: column;
+    }
+
+}
