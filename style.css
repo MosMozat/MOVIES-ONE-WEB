@@ -296,9 +296,9 @@ header .icons i:hover {
     display: block;
 }
 
-/* .pic-btn {
+.pic-btn {
     font-size: 12px;
-    border: 1px solid orangered;
+    border: 1px solid #ffff00;
     align-items: center;
     background: #000;
     text-decoration: none;
@@ -315,17 +315,17 @@ header .icons i:hover {
 
 .pic-btn:hover {
     color: #000000;
-    background: orangered;
+    background: #ffff00;
     border-radius: 5%;
 }
 
 @keyframes ticket {
     0% {color: #990000; left: 0px; top: 0px;}
-    25% {color: #ffff00; left: 200px; top: 0px;}
+    25% {color: #ffa500; left: 200px; top: 0px;}
     50% {color: #ffffff; left: 200px; top: 200px;}
     75% {color: #8fce00; left: 0px; top: 200px;}
-    100% {color: #452a00; left: 0px; top: 0px;}
-} */
+    100% {color: #000099; left: 0px; top: 0px;}
+}
 
 
 .page-footer {
@@ -995,6 +995,18 @@ footer .footer-bottom p {
         text-align: center;
     }
 
+    .pic-btn {
+        font-size: 1.5rem;
+    }
+    
+    .series-page-image {
+        background-size: cover;
+        background-position: center;
+        /* justify-content: left; */
+        /* text-align: center; */
+
+    }
+
     .movies-pic h3 span {
         font-size: 3.5rem;
         justify-content: center;
@@ -1034,12 +1046,12 @@ footer .footer-bottom p {
         text-align: center;
     }
 
+
     /* BOOKING IMAGE */
     .booking-page-image {
         background-size: cover;
-        background-position: left;
+        background-position: center;
         justify-content: left;
-        text-align: center;
     }
 
     .booking-title h1 {
@@ -1060,6 +1072,33 @@ footer .footer-bottom p {
 
     html {
         font-size: 40%;
+    }
+    
+    .home-image {
+        background-size: cover;
+        background-position: center;
+        justify-content: left;
+        text-align: center;
+    }
+
+    .booking-page-image {
+        background-size: cover;
+        background-position: center;
+        justify-content: left;
+        text-align: center;
+    }
+
+    .series-page-image {
+        background-size: cover;
+        background-position: center;
+        justify-content: left;
+        text-align: center;
+
+    }
+
+    .africa-page-image {
+        background-size: cover;
+        background-position: center;
     }
 
     .movies-pic .box-container {
